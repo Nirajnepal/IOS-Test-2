@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
 //  BMI Calculator Test 2
-//
-//  Created by Prajjwal Bhandari on 15/12/2022.
+//  Created by Niraj Nepal
+//  Student ID: 301211100
 //
 
 import UIKit
