@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D94FC07D294D45F4004D4E08 /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D94FC07B294D45F4004D4E08 /* User.xcdatamodeld */; };
+		D94FC080294D483A004D4E08 /* BMIModel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94FC07E294D483A004D4E08 /* BMIModel+CoreDataClass.swift */; };
+		D94FC081294D483A004D4E08 /* BMIModel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94FC07F294D483A004D4E08 /* BMIModel+CoreDataProperties.swift */; };
+		D965F983294D509200B918E7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D965F982294D509200B918E7 /* TableViewCell.swift */; };
 		D977A06C294BD81B0019FE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977A06B294BD81B0019FE43 /* AppDelegate.swift */; };
 		D977A06E294BD81B0019FE43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977A06D294BD81B0019FE43 /* SceneDelegate.swift */; };
 		D977A070294BD81B0019FE43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D977A06F294BD81B0019FE43 /* ViewController.swift */; };
@@ -14,9 +18,14 @@
 		D977A076294BD81B0019FE43 /* BMI_Calculator_Test_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D977A074294BD81B0019FE43 /* BMI_Calculator_Test_2.xcdatamodeld */; };
 		D977A078294BD81B0019FE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D977A077294BD81B0019FE43 /* Assets.xcassets */; };
 		D977A07B294BD81B0019FE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D977A079294BD81B0019FE43 /* LaunchScreen.storyboard */; };
+		D9EEB903294C11AC00423AF6 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EEB902294C11AC00423AF6 /* PersonalInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D94FC07C294D45F4004D4E08 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
+		D94FC07E294D483A004D4E08 /* BMIModel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMIModel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D94FC07F294D483A004D4E08 /* BMIModel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BMIModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D965F982294D509200B918E7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D977A068294BD81B0019FE43 /* BMI Calculator Test 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator Test 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D977A06B294BD81B0019FE43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D977A06D294BD81B0019FE43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,7 @@
 		D977A077294BD81B0019FE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D977A07A294BD81B0019FE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D977A07C294BD81B0019FE43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9EEB902294C11AC00423AF6 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				D977A06B294BD81B0019FE43 /* AppDelegate.swift */,
+				D94FC07E294D483A004D4E08 /* BMIModel+CoreDataClass.swift */,
+				D94FC07F294D483A004D4E08 /* BMIModel+CoreDataProperties.swift */,
 				D977A06D294BD81B0019FE43 /* SceneDelegate.swift */,
 				D977A06F294BD81B0019FE43 /* ViewController.swift */,
+				D94FC07B294D45F4004D4E08 /* User.xcdatamodeld */,
+				D9EEB902294C11AC00423AF6 /* PersonalInfoViewController.swift */,
 				D977A071294BD81B0019FE43 /* Main.storyboard */,
 				D977A077294BD81B0019FE43 /* Assets.xcassets */,
 				D977A079294BD81B0019FE43 /* LaunchScreen.storyboard */,
 				D977A07C294BD81B0019FE43 /* Info.plist */,
 				D977A074294BD81B0019FE43 /* BMI_Calculator_Test_2.xcdatamodeld */,
+				D965F982294D509200B918E7 /* TableViewCell.swift */,
 			);
 			path = "BMI Calculator Test 2";
 			sourceTree = "<group>";
@@ -141,8 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94FC081294D483A004D4E08 /* BMIModel+CoreDataProperties.swift in Sources */,
+				D94FC080294D483A004D4E08 /* BMIModel+CoreDataClass.swift in Sources */,
+				D94FC07D294D45F4004D4E08 /* User.xcdatamodeld in Sources */,
+				D965F983294D509200B918E7 /* TableViewCell.swift in Sources */,
 				D977A070294BD81B0019FE43 /* ViewController.swift in Sources */,
 				D977A06C294BD81B0019FE43 /* AppDelegate.swift in Sources */,
+				D9EEB903294C11AC00423AF6 /* PersonalInfoViewController.swift in Sources */,
 				D977A06E294BD81B0019FE43 /* SceneDelegate.swift in Sources */,
 				D977A076294BD81B0019FE43 /* BMI_Calculator_Test_2.xcdatamodeld in Sources */,
 			);
@@ -362,6 +382,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		D94FC07B294D45F4004D4E08 /* User.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D94FC07C294D45F4004D4E08 /* User.xcdatamodel */,
+			);
+			currentVersion = D94FC07C294D45F4004D4E08 /* User.xcdatamodel */;
+			path = User.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		D977A074294BD81B0019FE43 /* BMI_Calculator_Test_2.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
