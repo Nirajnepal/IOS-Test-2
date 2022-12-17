@@ -18,6 +18,7 @@
 		D977A076294BD81B0019FE43 /* BMI_Calculator_Test_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D977A074294BD81B0019FE43 /* BMI_Calculator_Test_2.xcdatamodeld */; };
 		D977A078294BD81B0019FE43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D977A077294BD81B0019FE43 /* Assets.xcassets */; };
 		D977A07B294BD81B0019FE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D977A079294BD81B0019FE43 /* LaunchScreen.storyboard */; };
+		D9E3B456294D77DD00F15E14 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E3B455294D77DD00F15E14 /* DetailViewController.swift */; };
 		D9EEB903294C11AC00423AF6 /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EEB902294C11AC00423AF6 /* PersonalInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		D977A077294BD81B0019FE43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D977A07A294BD81B0019FE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D977A07C294BD81B0019FE43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9E3B455294D77DD00F15E14 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D9EEB902294C11AC00423AF6 /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +78,7 @@
 				D94FC07B294D45F4004D4E08 /* User.xcdatamodeld */,
 				D9EEB902294C11AC00423AF6 /* PersonalInfoViewController.swift */,
 				D977A071294BD81B0019FE43 /* Main.storyboard */,
+				D9E3B455294D77DD00F15E14 /* DetailViewController.swift */,
 				D977A077294BD81B0019FE43 /* Assets.xcassets */,
 				D977A079294BD81B0019FE43 /* LaunchScreen.storyboard */,
 				D977A07C294BD81B0019FE43 /* Info.plist */,
@@ -163,6 +166,7 @@
 				D977A070294BD81B0019FE43 /* ViewController.swift in Sources */,
 				D977A06C294BD81B0019FE43 /* AppDelegate.swift in Sources */,
 				D9EEB903294C11AC00423AF6 /* PersonalInfoViewController.swift in Sources */,
+				D9E3B456294D77DD00F15E14 /* DetailViewController.swift in Sources */,
 				D977A06E294BD81B0019FE43 /* SceneDelegate.swift in Sources */,
 				D977A076294BD81B0019FE43 /* BMI_Calculator_Test_2.xcdatamodeld in Sources */,
 			);

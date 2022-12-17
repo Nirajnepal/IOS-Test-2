@@ -7,27 +7,29 @@
 
 import UIKit
 
-class PersonalInfoViewController: UIViewController, UITableViewDataSource {
+class PersonalInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    @IBOutlet weak var table: UITableView!
-
-    struct User{
-        let name: String
-        let date: String
-        let time: String
-    }
+    @IBOutlet weak var bmiTable: UITableView!
     
-    let data: [User] = [
-        User(name: "Jane Doe", date:"2022-12-25", time:"17:00 PM"),
-        User(name: "Jane Geda", date:"2022-12-25", time:"17:00 PM"),
-        User(name: "Jane MUJI", date:"2022-12-25", time:"17:00 PM"),
-    ]
-    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var data = [BMIModel]()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        table.dataSource = self
-          
+        bmiTable.dataSource = self
+        bmiTable.delegate = self
+        bmiTable.separatorInset = bmiTable.layoutMargins
+        fetchRecord()
+    }
+    
+    func fetchRecord(){
+        do{
+            self.data =  try context.fetch(BMIModel.fetchRequest())
+            self.bmiTable.reloadData()
+        }catch{
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,12 +37,28 @@ class PersonalInfoViewController: UIViewController, UITableViewDataSource {
         }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let user = data[indexPath.row]
-        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        cell.nameLabel.text = user.name
-        cell.dateLabel.text = user.date
-        cell.timeLabel.text = user.time
+        let cell = bmiTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        let bmiRecord: BMIModel!
+        bmiRecord = data[indexPath.row]
+
+        cell.nameLabel.text = bmiRecord.name!
+        cell.dateLabel.text = bmiRecord.date!
+        cell.timeLabel.text = bmiRecord.time!
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let bmiRecord: BMIModel!
+        bmiRecord = self.data[indexPath.row]
+        performSegue(withIdentifier: "detailView", sender: bmiRecord)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailViewController = segue.destination as? DetailViewController {
+            if let data = sender as? BMIModel {
+                detailViewController.dataList = data
+            }
+        }
     }
 
 }

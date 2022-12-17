@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var singleBMI : BMIModel!
+    var dataList = [BMIModel]()
 
     // Action for the submit button
     @IBAction func submitButtonTapped(_ sender: Any) {
@@ -65,8 +67,20 @@ class ViewController: UIViewController {
             bmi = round(bmi * 10) / 10
             
             showBMI(bmi:bmi)
-            modelValue(bmi, formatter3, date, hour, minutes)
+            modelElements(bmi, formatter3, date, hour, minutes)
+            check()
         }
+    }
+    
+    func check(){
+        var data = [BMIModel]()
+        do{
+            data =  try context.fetch(BMIModel.fetchRequest())
+//            self.bmiTable.reloadData()
+        }catch{
+            
+        }
+        print(data[0].name ?? "asdadsasd")
     }
     
     func showBMI(bmi: Double){
@@ -97,24 +111,23 @@ class ViewController: UIViewController {
         statusLabel.text = "Your BMI status is: \(status)"
     }
     
-    func modelValue(_ bmi: Double, _ formatter3: DateFormatter, _ date: Date, _ hour: Int, _ minutes: Int) {
+    func modelElements(_ bmi: Double, _ formatter3: DateFormatter, _ date: Date, _ hour: Int, _ minutes: Int) {
             let bmiModel = BMIModel(context: self.context)
             
             bmiModel.name = nameField.text
             bmiModel.age = ageField.text
             bmiModel.gender = genderField.text
-            bmiModel.bmi = String(format: "%.1f", bmi)
             bmiModel.weight = weightField.text
             bmiModel.height = heightField.text
             bmiModel.date = formatter3.string(from: date)
             bmiModel.time = String(hour) + " : " +  String(minutes)
+            bmiModel.bmi = String(format: "%.1f", bmi)
             self.saveData()
         }
     func saveData() {
             do
             {
                 try self.context.save()
-    //            let _ = try self.context.fetch(Note.fetchRequest())
             }
             catch {
                 print("Error")
